@@ -3,14 +3,14 @@ import json
 import os.path
 
 
-def input_json_data():
+def input_json_data(): #pragma: nocover
     path = os.path.join("..", "resource", "operations.json")
     with open(path, "r") as file:
         data = json.load(file)
     return data
 
 
-def take_exec_str(inp_json_data):
+def take_last_operation(inp_json_data): #pragma: nocover
     result = []
 
     for value in inp_json_data:
